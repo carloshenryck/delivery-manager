@@ -26,7 +26,6 @@ O projeto consiste em um site onde o usuário pode realizar a compra de produtos
 ### Front-end
 ![ReactJs](https://img.shields.io/badge/React.js-0c3e6f?style=for-the-badge&logo=react&logoColor=white)
 ![React Router](https://img.shields.io/badge/react_router-black?style=for-the-badge&logo=react-router)
-![RTL](https://img.shields.io/badge/react_testing_library-b31413?style=for-the-badge)
 ![Context API](https://img.shields.io/badge/Context_API-0c3e6f?style=for-the-badge&logo=react&logoColor=white)
 
 ### Back-end
@@ -36,6 +35,12 @@ O projeto consiste em um site onde o usuário pode realizar a compra de produtos
 ![JWT](https://img.shields.io/badge/JWT-fb015b?style=for-the-badge&logo=JSONWebTokens)
 ![MySQL](https://img.shields.io/badge/MySQL-1C1C1C?style=for-the-badge&logo=mysql)
 ![Docker](https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
+
+### Testes unitários
+![Mocha](https://img.shields.io/badge/Mocha-825f40?style=for-the-badge&logo=mocha&logoColor=white)
+![Chai](https://img.shields.io/badge/Chai-99070b?style=for-the-badge&logo=chai&logoColor=white)
+![Sinon](https://img.shields.io/badge/Sinon-97c89b?style=for-the-badge&logo=sinon.js&logoColor=white)
+![RTL](https://img.shields.io/badge/react_testing_library-b31413?style=for-the-badge&logo=rtl)
 
 ## 📦 Rodando o projeto
 
