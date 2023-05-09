@@ -20,7 +20,7 @@ O projeto consiste em um site onde o usuário pode realizar a compra de produtos
 
 ### Visualize todo o fluxo do projeto no figma
 [![Figma URL](https://img.shields.io/twitter/url?label=Veja%20no%20figma&logo=figma&logoColor=%234B0082&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCzwzjVrmxmAngJy1AgvLhU%2FHiLife-Prot-Alta-Fidelidade%3Fnode-id%3D0%253A1)](https://www.figma.com/file/IAIAk2omkWcXUY8kZxMlCC/delivery-app?type=design&node-id=0%3A1&t=SuFZMEcnZxLXYPFo-1)
-> Estilização em Andamento
+(Estilização em Andamento)
 
 ## 💻 Tecnologias
 ### Front-end
@@ -39,14 +39,51 @@ O projeto consiste em um site onde o usuário pode realizar a compra de produtos
 
 ## 📦 Rodando o projeto
 
-Instale as dependências
+Instale as dependências gerais
 ```bash
 npm i
 ```
-Rode a aplicação
+Instale as dependências de front e back
 ```bash
+npm run dev:prestart
+```
+Caso você não tenha MySQL instalado em seu computador, você pode utilizar o docker com os seguintes comandos
+```bash
+OBS: você precisa do docker-compose instalado
+cd back-end
+docker-compose up -d
+```
+Popule o banco de dados
+```bash
+cd back-end
+npm run db:reset
+```
+Rode o servidor back-end
+```bash
+cd back-end
+npm run dev
+```
+Rode o servidor front-end
+```bash
+cd front-end
 npm start
 ```
+<details>
+<summary>Contas testes para utilizar:</summary>
+
+#### Administrador: 
+**email**: adm@deliveryapp.com<br>
+**senha**: --adm2@21!!--
+  
+ #### Vendedor: 
+**email**: fulana@deliveryapp.com<br>
+**senha**: fulana@123
+  
+ #### Cliente: 
+**email**: zebirita@email.com<br>
+**senha**: '$#zebirita#$'
+</details>
+
 ## 👨‍💻 Contribuidores
 <table>
   <tr>
