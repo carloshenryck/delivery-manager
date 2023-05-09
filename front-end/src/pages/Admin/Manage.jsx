@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import AdminNavbar from '../../components/AdminNavbar';
 import { validateEmail, validatePassword } from '../../utils/verifyInputData';
 import api from '../../utils/apiURL';
-import logoCopoCheio from '../../images/copo_cheio_logo_mobile.png';
 
 function Manage() {
   const [inputPassword, setInputPassword] = useState('');

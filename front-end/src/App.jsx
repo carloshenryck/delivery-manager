@@ -16,7 +16,7 @@ import './App.css';
 
 function App() {
   return (
-    <main>
+    <main className="font-poppins text-[#202020]">
       <Route exact path="/">
         <Redirect to="/login" />
       </Route>

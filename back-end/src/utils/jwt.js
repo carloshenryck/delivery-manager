@@ -1,18 +1,5 @@
 require('dotenv').config();
-/* const fs = require('fs');  */
 const jwt = require('jsonwebtoken');
-/* const path = require('path');
- */
-/* const keyPath = path.join(__dirname, '../jwt.evaluation.key');
-
-const JWT_KEY = () => {
-  try {
-    const jwt = fs.readFileSync(keyPath, 'utf8');
-    return jwt;
-  } catch (err) {
-    console.error(err);
-  }
-}; */
 
 const generateToken = (obj) => {
     const { password, ...newObj } = obj;

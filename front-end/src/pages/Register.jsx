@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 import { validateEmail, validatePassword } from '../utils/verifyInputData';
 import api from '../utils/apiURL';
 import '../css/Register.css';
-import logoCopoCheio from '../images/copo_cheio_logo_mobile.png';
 
 function Register() {
   const [inputPassword, setInputPassword] = useState('');
