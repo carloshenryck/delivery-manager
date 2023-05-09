@@ -17,7 +17,7 @@ const create = async (objInfo, user) => {
     const { dataValues } = await models.User.findOne({ where: { id: objInfo.sellerId } });
     const newObj = obj(objInfo, user, Number(dataValues.id)); 
     const { dataValues: { id } } = await models.Sale.create({ ...newObj });
-  return Number(id);
+    return Number(id);
 };
 
 const findOne = async (column, search) => {
@@ -26,15 +26,14 @@ const findOne = async (column, search) => {
 };
 
 const createSale = async (objInfo, user) => {
-            const saleId = await create(objInfo, user);
-            const map = objInfo.products.map(async (elem) => {
-               const productId = await findOne('name', elem.name);
-                await models.SaleProduct
-                    .create({ 
-                        [SALE]: saleId, [PRODUCT]: productId, quantity: Number(elem.quantity) });
-            });
-            await Promise.all(map);
-            return saleId;
+    const saleId = await create(objInfo, user);
+    const map = objInfo.products.map(async (elem) => {
+    const productId = await findOne('name', elem.name);
+    await models.SaleProduct.create({ 
+        [SALE]: saleId, [PRODUCT]: productId, quantity: Number(elem.quantity) });
+    });
+    await Promise.all(map);
+    return saleId;
 };
 
 const sellers = async () => {
@@ -71,9 +70,8 @@ const allSales = async () => models.Sale.findAll({
 });
 
 const update = async ({ status }, id) => {
-const updated = await models.Sale.update({ status }, { where: { id } });
-
-return updated;
+    const updated = await models.Sale.update({ status }, { where: { id } });
+    return updated;
 };
 
 module.exports = { 
@@ -82,4 +80,5 @@ module.exports = {
     salesProdutcts,
     salesProdutctsId,
     allSales,
-    update };
+    update 
+};

@@ -10,9 +10,8 @@ chai.use(sinonChai);
 const { expect } = chai;
 
 describe('Testa os retornos da controller Register', function () {
-afterEach(sinon.restore);
-
-     it('É possível cadastrar um novo usuário', async function() {
+    afterEach(sinon.restore);
+    it('É possível cadastrar um novo usuário', async function() {
         const res = {};
         const req = { body: register };
 

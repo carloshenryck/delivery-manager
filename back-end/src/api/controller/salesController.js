@@ -4,7 +4,7 @@ const saleController = async (req, res) => {
     const arrayProducts = req.body;
     const usuario = req.user;
     const result = await salesService.createSale(arrayProducts, usuario);
-return res.status(201).json({ message: result });
+    return res.status(201).json({ message: result });
 };
 
 const sellersController = async (req, res) => {
@@ -29,10 +29,10 @@ const allSalesController = async (req, res) => {
 };
 
 const updateStatusController = async (req, res) => {
- const { id } = req.params;
- const corpo = req.body;
- const response = await salesService.update(corpo, id);
- return res.status(200).json(response);
+    const { id } = req.params;
+    const corpo = req.body;
+    const response = await salesService.update(corpo, id);
+    return res.status(200).json(response);
 };
 
 module.exports = { 
@@ -41,4 +41,5 @@ module.exports = {
      salesProductsController,
     salesProductsIdController,
     allSalesController,
-    updateStatusController };
+    updateStatusController 
+};

@@ -10,7 +10,7 @@ chai.use(sinonChai);
 const { expect } = chai;
 
 describe('Testa os retornos da controller Login', function () {
- it('Verifica que recebe resposta positiva com dados válidos', async function () {
+    it('Verifica que recebe resposta positiva com dados válidos', async function () {
         const res = { };
         const req = { body: login };
 

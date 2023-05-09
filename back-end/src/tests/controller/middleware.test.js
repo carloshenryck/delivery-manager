@@ -19,9 +19,8 @@ describe('Testa a funcionalidade do middleware de token', function () {
     it('Se ele permite ', async function () {
         const token = { Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkRlbGl2ZXJ5IEFwcCBBZG1pbiIsImVtYWlsIjoiYWRtQGRlbGl2ZXJ5YXBwLmNvbSIsInJvbGUiOiJhZG1pbmlzdHJhdG9yIiwiaWF0IjoxNjc1MjAwMTgwLCJleHAiOjE2NzUyODY1ODB9.UMBHVhs9PoZQsMz-RMBqPZ2TkKL6sZH0CnEth7Jk7eo'};
 
-
         sinon.stub(registerService, 'admUser').resolves('Created');
-         sinon.stub(jwt, 'verifyToken').returns(returnVerify);
+        sinon.stub(jwt, 'verifyToken').returns(returnVerify);
 
         const result = await chai.request(app).post('/register/adm').set(token).send({
             name: "Michael Jordan",
@@ -31,5 +30,4 @@ describe('Testa a funcionalidade do middleware de token', function () {
         });
         expect(result.status).to.be.equal(201);
     });
-
 });

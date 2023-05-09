@@ -8,8 +8,8 @@ const newUser = async (obj) => {
     const response = await models.User
         .findOne({ where: { [Op.or]: [{ email: obj.email }, { name: obj.name }] } });
     if (response) throw throwError;
-  await models.User.create({ ...obj, password: senha, role: 'customer' });
-     return 'Created';
+    await models.User.create({ ...obj, password: senha, role: 'customer' });
+    return 'Created';
 };
 
  const admUser = async (obj, user) => {

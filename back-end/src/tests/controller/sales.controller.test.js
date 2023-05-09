@@ -11,9 +11,8 @@ chai.use(sinonChai);
 const { expect } = chai;
 
 describe('Testa os retornos da controller Sales', function () {
-afterEach(sinon.restore);
-
-     it('Retorna corretamente o id da venda', async function() {
+    afterEach(sinon.restore);
+    it('Retorna corretamente o id da venda', async function() {
         const res = {};
         const req = { body: corpo,  user };
 
@@ -87,6 +86,7 @@ afterEach(sinon.restore);
         expect(res.status.calledWith(200)).to.be.equal(true);
         expect(res.json.calledWith(returnSales)).to.be.equal(true);
     });
+
     it('Retorna [1] monstrando o sucesso do update do status do pedido', async function() {
         const res = {};
         const req = {params: {id: 1}, body: {status: 'Pendente'}};

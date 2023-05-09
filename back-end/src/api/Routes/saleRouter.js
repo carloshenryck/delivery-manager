@@ -1,11 +1,12 @@
 const { Router } = require('express');
 const { 
     saleController,
-     sellersController,
-      salesProductsController,
-      salesProductsIdController, 
-      allSalesController, 
-      updateStatusController } = require('../controller/salesController');
+    sellersController,
+    salesProductsController,
+    salesProductsIdController, 
+    allSalesController, 
+    updateStatusController 
+} = require('../controller/salesController');
 const validationToken = require('../middlewares/tokenValidation');
 
 const sale = Router();

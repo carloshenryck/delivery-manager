@@ -12,17 +12,18 @@ describe('Testes referentes a service Login',  function () {
         
         try {
             await serviceLogin.login(login);
-        }catch(erro) {
+        } catch(erro) {
             expect(erro.status).to.be.equal(404);
             expect(erro.message).to.be.equal('Not Found')
         } 
     });
+
     it('Retorna um login feito com sucesso com token', async function() {
         sinon.stub(models.User, 'findOne').resolves(returnUser);
         sinon.stub(token, 'generateToken').returns('123456789');
 
-            const result = await serviceLogin.login(login);
-            const {dataValues: {password, ...newObj}} = returnUser;
+        const result = await serviceLogin.login(login);
+        const {dataValues: {password, ...newObj}} = returnUser;
             
         expect(result).to.deep.equal({...newObj, token: '123456789'});
     });
