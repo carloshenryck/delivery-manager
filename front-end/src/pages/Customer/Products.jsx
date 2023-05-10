@@ -12,7 +12,7 @@ function Products() {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-screen-2xl 2xl:mx-auto">
       <Navbar />
       <div
         data-testid="customer_products__element-navbar-user-full-name"

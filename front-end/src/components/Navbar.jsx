@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/Products.css';
 
 function Navbar() {
   const [userName, setUserName] = useState('');
@@ -11,7 +10,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar max-w-screen-2xl">
       <Link
         data-testid="customer_products__element-navbar-link-products"
         to="/customer/products"

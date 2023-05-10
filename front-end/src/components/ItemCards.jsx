@@ -77,26 +77,27 @@ function ItemCard() {
 
   return (
     <div
-      className="grid grid-cols-1 sm:grid-cols-2
-      md:grid-cols-3 mt-9 px-[10%] gap-x-2 gap-y-6"
+      className="grid grid-cols-2
+      md:grid-cols-3 mt-9 mb-32 px-[10%] gap-x-2 gap-y-6"
     >
       { products.map((product) => (
-        <article
+        <div
           key={ product.id }
           className="flex justify-center
-          border-solid border-[1px] border-[#BDBDBD] rounded-lg h-32"
+          items-center flex-col sm:flex-row border-solid border-[1px]
+          border-[#BDBDBD] rounded-lg sm:h-32 px-2 py-5 gap-2"
           data-testid={ `customer_products__element-card-price-${product.id}` }
         >
           <div className="img_drink_container">
             <img
               data-testid={ `customer_products__img-card-bg-image-${product.id}` }
-              className="h-4/5"
+              className="w-full mb-3 sm:mb-0 sm:w-48 aspect-square"
               src={ product.url_image }
               alt="product demo"
             />
           </div>
           <div>
-            <div className="product_title">
+            <div className="font-medium">
               <h2
                 data-testid={ `customer_products__element-card-title-${product.id}` }
               >
@@ -106,16 +107,17 @@ function ItemCard() {
             <div className="item_price_container">
               <h4
                 data-testid={ `customer_products__element-card-price-${product.id}` }
+                className="text-[#7E7E7E] mt-1"
               >
                 R$
                 {' '}
                 { product.price.toString().replace('.', ',') }
               </h4>
             </div>
-            <div className="select_quant_container">
+            <div className="flex w-full sm:w-11/12 gap-2 mt-5">
               <button
                 type="button"
-                className="add_delete_quantity"
+                className="bg-[#FCE457] rounded-md px-3 py-2"
                 data-testid={ `customer_products__button-card-rm-item-${product.id}` }
                 onClick={ () => handleRemoveButton(product.id) }
               >
@@ -124,14 +126,15 @@ function ItemCard() {
               <input
                 data-testid={ `customer_products__input-card-quantity-${product.id}` }
                 type="number"
-                className="w-full"
+                className="w-full border-[1px] border-[#BDBDBD] rounded-md
+                outline-[#898989] text-center"
                 value={ product.quantity }
                 onChange={ (e) => changeQuantity(e, product.id) }
                 min="0"
               />
               <button
                 type="button"
-                className="add_delete_quantity"
+                className="bg-[#FCE457] rounded-md px-3 py-2"
                 data-testid={ `customer_products__button-card-add-item-${product.id}` }
                 onClick={ () => handleAddButton(product.id) }
               >
@@ -139,7 +142,7 @@ function ItemCard() {
               </button>
             </div>
           </div>
-        </article>
+        </div>
       )) }
     </div>
   );

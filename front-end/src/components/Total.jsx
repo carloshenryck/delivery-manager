@@ -10,7 +10,7 @@ function Total() {
     .reduce((acc, cur) => acc + cur, 0).toFixed(2).replace('.', ',');
 
   return (
-    <div className="customer_button-cart">
+    <div className="fixed bottom-8 right-3 bg-[#FCE457] px-5 py-3 rounded-lg z-40">
       <button
         type="button"
         className="button_cart"
@@ -18,14 +18,13 @@ function Total() {
         onClick={ () => navigate.push('/customer/checkout') }
         disabled={ !cart.length > 0 }
       >
-        <p id="total">
-          Total:
+        <p
+          data-testid="customer_spanroducts__checkout-bottom-value"
+          className="text-[#564E22] font-medium"
+        >
+          Ver carrinho:
           {' '}
-          R$
-          {' '}
-        </p>
-        <p data-testid="customer_products__checkout-bottom-value">
-          {`${total || 0}`}
+          <span className="text-[#93853C]">{`R$ ${total || 0}`}</span>
         </p>
       </button>
     </div>
