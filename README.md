@@ -2,7 +2,7 @@
 <br/>
 
 ## 📋 Sobre
-O projeto consiste em um site onde o usuário pode realizar a compra de produtos e acompanhar o seu estado, e o vendedor poderá gerenciar todos os seus pedidos recebidos
+O projeto consiste em um site onde o usuário pode realizar a compra de bebidas e acompanhar o seu estado, e o vendedor poderá gerenciar todos os seus pedidos recebidos
 
 ## ✨ Funcionalidades
 - Login/Casdastro
