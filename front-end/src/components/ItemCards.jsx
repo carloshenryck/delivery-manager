@@ -76,61 +76,68 @@ function ItemCard() {
   };
 
   return (
-    <div className="products_list">
+    <div
+      className="grid grid-cols-1 sm:grid-cols-2
+      md:grid-cols-3 mt-9 px-[10%] gap-x-2 gap-y-6"
+    >
       { products.map((product) => (
         <article
           key={ product.id }
+          className="flex justify-center
+          border-solid border-[1px] border-[#BDBDBD] rounded-lg h-32"
           data-testid={ `customer_products__element-card-price-${product.id}` }
         >
-          <div className="product_title">
-            <h2
-              data-testid={ `customer_products__element-card-title-${product.id}` }
-            >
-              { product.name }
-            </h2>
-          </div>
           <div className="img_drink_container">
             <img
               data-testid={ `customer_products__img-card-bg-image-${product.id}` }
+              className="h-4/5"
               src={ product.url_image }
               alt="product demo"
-              // className="drink-image"
             />
           </div>
-          <div className="item_price_container">
-            <h4
-              data-testid={ `customer_products__element-card-price-${product.id}` }
-            >
-              R$
-              {' '}
-              { product.price.toString().replace('.', ',') }
-            </h4>
-          </div>
-          <div className="select_quant_container">
-            <button
-              type="button"
-              className="add_delete_quantity"
-              data-testid={ `customer_products__button-card-rm-item-${product.id}` }
-              onClick={ () => handleRemoveButton(product.id) }
-            >
-              -
-            </button>
-            <input
-              data-testid={ `customer_products__input-card-quantity-${product.id}` }
-              type="number"
-              className="quantity_input"
-              value={ product.quantity }
-              onChange={ (e) => changeQuantity(e, product.id) }
-              min="0"
-            />
-            <button
-              type="button"
-              className="add_delete_quantity"
-              data-testid={ `customer_products__button-card-add-item-${product.id}` }
-              onClick={ () => handleAddButton(product.id) }
-            >
-              +
-            </button>
+          <div>
+            <div className="product_title">
+              <h2
+                data-testid={ `customer_products__element-card-title-${product.id}` }
+              >
+                { product.name }
+              </h2>
+            </div>
+            <div className="item_price_container">
+              <h4
+                data-testid={ `customer_products__element-card-price-${product.id}` }
+              >
+                R$
+                {' '}
+                { product.price.toString().replace('.', ',') }
+              </h4>
+            </div>
+            <div className="select_quant_container">
+              <button
+                type="button"
+                className="add_delete_quantity"
+                data-testid={ `customer_products__button-card-rm-item-${product.id}` }
+                onClick={ () => handleRemoveButton(product.id) }
+              >
+                -
+              </button>
+              <input
+                data-testid={ `customer_products__input-card-quantity-${product.id}` }
+                type="number"
+                className="w-full"
+                value={ product.quantity }
+                onChange={ (e) => changeQuantity(e, product.id) }
+                min="0"
+              />
+              <button
+                type="button"
+                className="add_delete_quantity"
+                data-testid={ `customer_products__button-card-add-item-${product.id}` }
+                onClick={ () => handleAddButton(product.id) }
+              >
+                +
+              </button>
+            </div>
           </div>
         </article>
       )) }

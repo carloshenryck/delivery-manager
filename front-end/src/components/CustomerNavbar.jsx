@@ -1,46 +1,39 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import '../css/Products.css';
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 function Navbar() {
-  const [userName, setUserName] = useState('');
-
   const logout = () => {
     localStorage.removeItem('user');
   };
 
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    setUserName(user.name);
-  }, []);
-
   return (
-    <nav className="navbar">
-      <Link
-        data-testid="customer_products__element-navbar-link-products"
-        to="/customer/products"
-      >
-        <p>Produtos</p>
-      </Link>
-      <Link
-        data-testid="customer_products__element-navbar-link-orders"
-        to="/customer/orders"
-      >
-        <p>Meus Pedidos</p>
-      </Link>
-      <div
-        data-testid="customer_products__element-navbar-user-full-name"
-        to="/userProfile"
-      >
-        <p>{ userName }</p>
+    <nav className="w-full px-[10%] mt-7">
+      <div className="hidden sm:flex font-medium gap-20">
+        <Link
+          data-testid="customer_products__element-navbar-link-products"
+          to="/customer/products"
+        >
+          <p>Produtos</p>
+        </Link>
+        <Link
+          data-testid="customer_products__element-navbar-link-orders"
+          to="/customer/orders"
+          className="mr-auto"
+        >
+          <p>Meus Pedidos</p>
+        </Link>
+        <Link
+          className="text-[#FF0000]"
+          data-testid="customer_products__element-navbar-link-logout"
+          to="/login"
+          onClick={ logout }
+        >
+          <p>Sair</p>
+        </Link>
       </div>
-      <Link
-        data-testid="customer_products__element-navbar-link-logout"
-        to="/login"
-        onClick={ logout }
-      >
-        <p>Sair</p>
-      </Link>
+      <button type="button" className="block sm:hidden ml-auto text-3xl">
+        <RxHamburgerMenu />
+      </button>
     </nav>
   );
 }

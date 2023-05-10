@@ -7,8 +7,6 @@ import ShoppingCart from '../../components/ShoppingCart';
 import api from '../../utils/apiURL';
 import { CustomerContext } from '../../context/CustomerContext';
 
-import '../../css/Products.css';
-
 export default function Checkout() {
   const [selectedSeller, setSelectedSeller] = useState(0);
   const [deliveryAddress, setDeliveryAddress] = useState('');

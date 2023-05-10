@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../utils/apiURL';
 import { validateEmail, validatePassword } from '../utils/verifyInputData';
-import '../css/Login.css';
 
 function Login() {
   const [inputPassword, setInputPassword] = useState('');
@@ -64,7 +63,7 @@ function Login() {
 
       <div className="mt-9 flex flex-col gap-5 w-4/5 sm:w-96">
         <label htmlFor="email-input" className="flex flex-col">
-          <span className="text-[#bdbdbd] text-lg sm:text-xl">Email</span>
+          <span className="text-lg sm:text-xl">Email</span>
           <input
             className="w-full sm:w-96 h-10 border-2
             outline-2 outline-[#a0a0a0] pl-4 rounded-lg"
@@ -78,7 +77,7 @@ function Login() {
         </label>
 
         <label htmlFor="password-input" className="flex flex-col">
-          <span className="text-[#bdbdbd] text-lg sm:text-xl">Senha</span>
+          <span className="text-lg sm:text-xl">Senha</span>
           <input
             className="w-full h-10 border-2
             outline-2 outline-[#a0a0a0] pl-4 rounded-lg"
@@ -107,13 +106,13 @@ function Login() {
           Entrar
         </button>
         <div className="mt-5 whitespace-nowrap">
-          <span className="text-[#bdbdbd] text-sm sm:text-base">
+          <span className="text-[#bdbdbd] text-base">
             Não tem uma conta ?
             {' '}
           </span>
           <button
             type="button"
-            className="text-sm sm:text-base"
+            className="text-base"
             data-testid="common_login__button-register"
             onClick={ () => history.push('/register') }
           >
