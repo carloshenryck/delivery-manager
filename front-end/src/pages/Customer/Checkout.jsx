@@ -50,9 +50,9 @@ export default function Checkout() {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-screen-2xl 2xl:mx-auto">
       <Navbar />
-      <div id="cart_header">
+      <div className="text-2xl sm:text-3xl font-normal mt-10 pl-[10%]">
         <h1>Finalizar Pedido</h1>
       </div>
       <ShoppingCart

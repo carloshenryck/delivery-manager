@@ -88,7 +88,7 @@ function ItemCard() {
           border-[#BDBDBD] rounded-lg sm:h-32 px-2 py-5 gap-2"
           data-testid={ `customer_products__element-card-price-${product.id}` }
         >
-          <div className="img_drink_container">
+          <div>
             <img
               data-testid={ `customer_products__img-card-bg-image-${product.id}` }
               className="w-full mb-3 sm:mb-0 sm:w-48 aspect-square"

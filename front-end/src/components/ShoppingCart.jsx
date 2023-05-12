@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { BsTrash } from 'react-icons/bs';
 import { CustomerContext } from '../context/CustomerContext';
-import trash from '../images/trash_icon.png';
 
 export default function ShoppingCart({ products = [], buttonEnabled = false, prefix }) {
   const { setCart } = useContext(CustomerContext);
@@ -30,45 +30,38 @@ export default function ShoppingCart({ products = [], buttonEnabled = false, pre
 
   return (
     <section>
-      <div id="cart_list">
-
+      <div
+        className="w-full grid grid-cols-1
+        md:grid-cols-2 px-[10%] my-10 gap-x-2 gap-y-6"
+      >
         { products.map((product, index) => (
-          <div key={ `produto_${index}` } id="item_card">
-            <div className="img_shop_cart_container">
-              <img src={ product.url_image } alt={ `imagem de  ${product.name}` } />
+          <div
+            key={ `produto_${index}` }
+            className="flex items-start px-2 py-3 h-24 border-solid border-[1px]
+          border-[#BDBDBD] rounded-lg"
+          >
+            <div className="img_shop_cart_container h-full self-center">
+              <img
+                src={ product.url_image }
+                alt={ `imagem de  ${product.name}` }
+                className="h-full aspect-square"
+              />
             </div>
-            <div className="product_info">
-              <div className="item_info">
-                <p className="item_title">{ product.name }</p>
-              </div>
-              <div className="item_info">
-                <p className="item_price">
-                  {getQuantity(product)}
-                  { 'x R$ '}
-                  {fixNumberFormat(Number(product.price))}
-                </p>
-              </div>
-              <div className="item_info">
-                { buttonEnabled ? (
-                  <p className="item_total">
-                    Total R$
-                    { ' ' }
-                    {fixNumberFormat(Number(product.price * getQuantity(product)))}
-                  </p>
-                ) : (
-                  <p className="item_total">
-                    Total R$
-                    { ' ' }
-                    {fixNumberFormat(Number(
-                      product.price * product.SaleProduct.quantity,
-                    ))}
-                  </p>
-                ) }
-              </div>
+            <div className="mr-3">
+              <p
+                className=" text-base sm:text-lg lg:text-xl font-medium"
+              >
+                { product.name }
+              </p>
+              <p className="text-[#7E7E7E] text-sm lg:text-base">
+                {getQuantity(product)}
+                { 'x R$ '}
+                {fixNumberFormat(Number(product.price))}
+              </p>
             </div>
             { buttonEnabled ? (
               <button
-                className="remove_iten_btn"
+                className="self-start ml-auto mr-2"
                 type="button"
                 id="deleteBtn"
                 data-testid={
@@ -76,7 +69,7 @@ export default function ShoppingCart({ products = [], buttonEnabled = false, pre
                 }
                 onClick={ () => removeFromCart(product.id) }
               >
-                <img src={ trash } alt="trash icon" />
+                <BsTrash />
               </button>
             ) : <>.</> }
           </div>
