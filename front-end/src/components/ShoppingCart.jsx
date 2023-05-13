@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { BsTrash } from 'react-icons/bs';
+import { FiTrash } from 'react-icons/fi';
 import { CustomerContext } from '../context/CustomerContext';
 
 export default function ShoppingCart({ products = [], buttonEnabled = false, prefix }) {
@@ -69,9 +69,9 @@ export default function ShoppingCart({ products = [], buttonEnabled = false, pre
                 }
                 onClick={ () => removeFromCart(product.id) }
               >
-                <BsTrash />
+                <FiTrash />
               </button>
-            ) : <>.</> }
+            ) : '' }
           </div>
         ))}
       </div>
