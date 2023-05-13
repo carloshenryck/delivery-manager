@@ -12,11 +12,11 @@ function Products() {
   }, []);
 
   return (
-    <div className="max-w-screen-2xl 2xl:mx-auto">
+    <div className="max-w-screen-2xl 2xl:mx-auto px-[10%]">
       <Navbar />
       <div
         data-testid="customer_products__element-navbar-user-full-name"
-        className="mt-10 pl-[10%]"
+        className="mt-10"
       >
         <p className="text-2xl sm:text-3xl font-light">
           Bem vindo,

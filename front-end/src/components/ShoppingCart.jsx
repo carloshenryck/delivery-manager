@@ -32,7 +32,7 @@ export default function ShoppingCart({ products = [], buttonEnabled = false, pre
     <section>
       <div
         className="w-full grid grid-cols-1
-        md:grid-cols-2 px-[10%] my-10 gap-x-2 gap-y-6"
+        md:grid-cols-2 mt-6 mb-5 gap-x-2 gap-y-6"
       >
         { products.map((product, index) => (
           <div
@@ -77,10 +77,14 @@ export default function ShoppingCart({ products = [], buttonEnabled = false, pre
       </div>
 
       <div
-        className="total_container"
+        className="bg-[#FCE457] rounded-md px-3 py-3 text-[#564E22] font-medium w-fit"
         data-testid={ `${prefix}__element-order-total-price` }
       >
-        { `Total: R$ ${totalValue()}` }
+        Total:
+        {' '}
+        <span className="text-[#93853C]">
+          { `R$ ${totalValue()}` }
+        </span>
       </div>
     </section>
   );

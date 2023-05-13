@@ -78,7 +78,7 @@ function ItemCard() {
   return (
     <div
       className="grid grid-cols-2
-      md:grid-cols-3 mt-9 mb-32 px-[10%] gap-x-2 gap-y-6"
+      md:grid-cols-3 mt-9 mb-32 gap-x-2 gap-y-6"
     >
       { products.map((product) => (
         <div

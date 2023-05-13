@@ -19,7 +19,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full px-[10%] mt-7 2xl:mx-auto max-w-screen-2xl">
+    <nav className="w-full mt-7 2xl:mx-auto max-w-screen-2xl">
       <div className="hidden sm:flex font-medium gap-20">
         <Link
           data-testid="customer_products__element-navbar-link-products"
