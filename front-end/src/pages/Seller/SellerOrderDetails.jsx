@@ -73,7 +73,7 @@ function SellerOrderDetails() {
   }, [order]);
 
   return (
-    <div>
+    <div className="max-w-screen-2xl 2xl:mx-auto px-[10%] mb-12">
       <Navbar />
       <div className="order_details_container">
         <h1>Detalhe do pedido</h1>
