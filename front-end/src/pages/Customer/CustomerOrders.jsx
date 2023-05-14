@@ -18,12 +18,16 @@ function Orders() {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-screen-2xl 2xl:mx-auto px-[10%] mb-12">
       <Navbar />
-      <div className="orders_container">
+      <div className="mt-10 grid grid-cols-2 gap-4">
         { orders ? (
           orders.map((order) => (
-            <div key={ order.id } className="order_card">
+            <div
+              key={ order.id }
+              className="flex px-2 py-3 h-24 border-solid border-[1px]
+            border-[#BDBDBD] rounded-lg"
+            >
               <div className="number_order">
                 <Link to={ `/customer/orders/${order.id}` }>
                   <p
