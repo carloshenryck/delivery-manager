@@ -42,7 +42,7 @@ function Orders() {
               </div>
 
               <div
-                className="text-base lg:text-xl bg-[#FCE457] rounded-md h-full
+                className="text-sm lg:text-xl bg-[#FCE457] rounded-md h-full
                 text-[#564E22] font-medium flex flex-col
                 items-center justify-center w-2/4"
               >

@@ -53,7 +53,7 @@ function SellerOrders() {
                 </div>
 
                 <div
-                  className="text-base lg:text-xl bg-[#FCE457] rounded-md h-full
+                  className="text-sm lg:text-xl bg-[#FCE457] rounded-md h-full
                 text-[#564E22] font-medium flex flex-col
                   items-center justify-center w-2/4"
                 >
@@ -72,7 +72,6 @@ function SellerOrders() {
                   >
                     { moment(`${order.saleDate}`).format('DD/MM/YYYY') }
                   </p>
-
                   <p
                     className="bg-[#FCE457] rounded-md px-3 h-2/4
                     flex flex-col items-center justify-center text-sm text-[#93853C]

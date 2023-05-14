@@ -64,7 +64,7 @@ function CustomerOrderDetails() {
         className="mt-10 sm:mt-16 flex flex-col sm:flex-row
         items-start sm:items-end gap-0 sm:gap-2"
       >
-        <p className="text-2xl sm:text-3xl font-normal">Detalhe do pedido</p>
+        <p className="text-2xl sm:text-3xl font-normal">Detalhes do pedido</p>
         <p
           className="text-[#BDBDBD] mb-[7px]"
           data-testid={ `${prefix}element-order-details-label-order-id` }
@@ -104,7 +104,7 @@ function CustomerOrderDetails() {
           <button
             className="bg-[#FCE457] rounded-md px-2 py-2 text-[#564E22]
             font-medium disabled:bg-[#fce35782] disabled:text-[#564e2262]
-            cursor-pointer mb-5"
+            disabled:hidden cursor-pointer mb-5"
             data-testid="customer_order_details__button-delivery-check"
             type="button"
             onClick={ () => changeStatus('Entregue') }
