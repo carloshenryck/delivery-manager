@@ -7,9 +7,13 @@ import api from '../../utils/apiURL';
 
 function SellerOrders() {
   const [orders, setOrders] = useState();
+  const [userName, setUserName] = useState('');
   const orderNumberLength = 4;
 
   useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    setUserName(user.name);
+
     const getOrders = async () => {
       const response = await api.get('/sale');
       setOrders(response.data);
@@ -18,9 +22,15 @@ function SellerOrders() {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-screen-2xl 2xl:mx-auto px-[10%] mb-12">
       <Navbar />
-      <div className="seller_orders_container">
+      <p className="text-2xl sm:text-3xl font-light mt-10">
+        Bem vindo,
+        {' '}
+        <br className="block sm:hidden " />
+        <span className="font-medium">{ userName }</span>
+      </p>
+      <div>
         { orders ? (
           orders.map((order) => (
             <div key={ order.id } className="order_card">
