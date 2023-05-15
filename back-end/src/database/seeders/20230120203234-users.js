@@ -20,7 +20,7 @@ module.exports = {
     id: 3 ,
     name: 'Zé Birita',
     email: 'zebirita@email.com' ,
-    password: '1c37466c159755ce1fa181bd247cb925',
+    password: '3791f9895496912998dcd2786f81bc72',
     role: 'customer' ,
   }])
   },

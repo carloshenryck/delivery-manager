@@ -25,6 +25,13 @@ function Register() {
         password: inputPassword,
       });
 
+      const response = await api.post('/login', {
+        email: inputEmail,
+        password: inputPassword,
+      });
+
+      delete response.data.id;
+      localStorage.setItem('user', JSON.stringify(response.data));
       history.push('/customer/products');
     } catch (err) {
       console.log(err);
