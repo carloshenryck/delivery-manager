@@ -86,7 +86,7 @@ npm start
   
  #### Cliente: 
 **email**: zebirita@email.com<br>
-**senha**: '$#zebirita#$'
+**senha**: --zebirita--
 </details>
 
 ## 👨‍💻 Contribuidores
