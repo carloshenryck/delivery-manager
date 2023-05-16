@@ -1,5 +1,4 @@
 import axios from 'axios';
-import 'dotenv/config';
 
 const HOST = process.env.API_HOST || 'localhost';
 const PROTOCOL = process.env.API_PROTOCOL || 'http';
