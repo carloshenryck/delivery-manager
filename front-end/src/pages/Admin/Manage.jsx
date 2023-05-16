@@ -20,7 +20,7 @@ function Manage() {
 
   const register = async () => {
     try {
-      const response = await api.post(
+      await api.post(
         '/register/adm',
         {
           name: inputName,
@@ -34,9 +34,7 @@ function Manage() {
           },
         },
       );
-      console.log(response);
     } catch (err) {
-      console.log(err);
       setErrorMessage('Erro no cadastro');
     }
   };

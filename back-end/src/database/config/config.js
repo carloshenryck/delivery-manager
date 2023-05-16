@@ -23,8 +23,6 @@ const options = {
   logging: false,
 };
 
-console.log(process.env.MYSQLHOST, process.env.MYSQLPORT, process.env.MYSQLDATABASE, process.env.MYSQLUSER, process.env.MYSQLPASSWORD);
-
 module.exports = {
   development: {
     ...options,

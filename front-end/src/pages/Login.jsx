@@ -33,7 +33,6 @@ function Login() {
         history.push('/admin/manage');
       }
     } catch (err) {
-      console.log(err);
       setErrorMessage(err.message);
     }
   };

@@ -34,7 +34,6 @@ function Register() {
       localStorage.setItem('user', JSON.stringify(response.data));
       history.push('/customer/products');
     } catch (err) {
-      console.log(err);
       setErrorMessage('Erro no cadastro');
     }
   };
