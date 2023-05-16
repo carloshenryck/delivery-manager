@@ -13,8 +13,7 @@ const suffix = {
 const options = {
   host: process.env.MYSQLHOST || process.env.HOSTNAME || 'localhost',
   port: process.env.MYSQLPORT || '3306',
-  database: 
-    `${process.env.MYSQLDATABASE || 'delivery-app'}${suffix[environment] || suffix.test}`,
+  database: process.env.MYSQLDATABASE || 'delivery-app',
   username: process.env.MYSQLUSER || 'root',
   password: process.env.MYSQLPASSWORD || '123456',
   dialect: 'mysql',
