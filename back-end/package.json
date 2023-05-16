@@ -9,7 +9,7 @@
   "engineStrict": true,
   "private": true,
   "scripts": {
-    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "prestart": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "start": "node .",
     "dev": "nodemon .",
     "test": "mocha src/tests/**/*$NAME*.test.js --exit",
@@ -28,6 +28,7 @@
     "express-rescue": "1.1.31",
     "jsonwebtoken": "8.5.1",
     "md5": "2.3.0",
+    "moment": "^2.29.4",
     "multer": "1.4.4",
     "mysql2": "2.3.3",
     "sequelize": "6.17.0",

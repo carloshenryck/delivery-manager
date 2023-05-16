@@ -56,9 +56,9 @@ function Manage() {
     <div>
       <AdminNavbar />
       <div className="admin_container">
-        <div className="img_container">
+        {/* <div className="img_container">
           <img src={ logoCopoCheio } alt="logotipo Copo Cheio" className="logo" />
-        </div>
+        </div> */}
         <label htmlFor="name-input">
           <input
             data-testid="admin_manage__input-name"
