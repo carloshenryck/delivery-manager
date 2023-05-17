@@ -83,15 +83,11 @@ function SellerOrders() {
                 </div>
               </div>
               <p
-                className="w-full text-end mt-3 text-[#7E7E7E]
-                leading-5 text-sm lg:text-base"
+                className="w-full text-end mt-4 text-[#7E7E7E]
+                leading-5 text-sm lg:text-base font-medium"
                 data-testid={ `seller_orders__element-card-address-${order.id}` }
               >
-                <b>Endereço de Entrega:</b>
-                {' '}
-                <span className="font-medium">
-                  { `${order.deliveryAddress}, ${order.deliveryNumber}` }
-                </span>
+                { `${order.deliveryAddress}, ${order.deliveryNumber}` }
               </p>
             </Link>
           ))
