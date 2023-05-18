@@ -4,7 +4,7 @@ const validationToken = require('../middlewares/tokenValidation');
 
 const user = Router();
 
-user.get('/', validationToken, allUsers);
+user.get('/', allUsers);
 user.delete('/:id', validationToken, removeUser)
 
 module.exports = user;

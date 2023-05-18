@@ -38,7 +38,7 @@ function Navbar() {
       </button>
       <nav
         className={ `h-screen w-full max-w-full flex flex-col font-medium
-        justify-evenly items-center ${isClosed ? 'hidden' : 'absolute'} 
+        justify-center gap-10 items-center ${isClosed ? 'hidden' : 'absolute'} 
         bg-white inset-0 z-50` }
       >
         <button
