@@ -43,6 +43,10 @@ function Manage() {
         },
       );
 
+      setInputEmail('');
+      setInputName('');
+      setInputPassword('');
+      setSelectedRole('');
       fetchUsers();
     } catch (err) {
       setErrorMessage('Erro no cadastro');
@@ -153,7 +157,9 @@ function Manage() {
       </form>
       <button
         type="button"
-        className="w-full sm:w-fit bg-[#FCE457] rounded-md px-0 sm:px-20 py-3
+        className="w-full sm:w-fit bg-[#FCE457]
+        hover:bg-[#ffed89] disabled:opacity-50
+        transition-colors rounded-md px-0 sm:px-20 py-3
         text-[#564E22] font-medium mt-5"
         data-testid="admin_manage__button-register"
         disabled={ isDisabled }
