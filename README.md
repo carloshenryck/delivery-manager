@@ -1,6 +1,4 @@
 <h1 align="center">Delivery Manager</h1>
-<br/>
-
 <details>
 <summary>Contas testes para utilizar:</summary>
 
@@ -16,7 +14,6 @@
 **email**: zebirita@email.com<br>
 **senha**: --zebirita--
 </details>
-<br/>
 <h1 align="center">
   <img src="./apresentacao.png" alt="apresentação design" style="max-height:400px;border-radius:10px;"/>
 </h1>
