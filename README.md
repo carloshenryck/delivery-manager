@@ -37,7 +37,6 @@ O projeto consiste em um site onde o usuário pode realizar a compra de bebidas 
 
 ### Visualize todo o fluxo do projeto no figma
 [![Figma URL](https://img.shields.io/twitter/url?label=Veja%20no%20figma&logo=figma&logoColor=%234B0082&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCzwzjVrmxmAngJy1AgvLhU%2FHiLife-Prot-Alta-Fidelidade%3Fnode-id%3D0%253A1)](https://www.figma.com/file/encAyJTwOGVvRtsIgPCpzP/Delivery-Manager?type=design&node-id=0%3A1&t=Qtr1L58SpUAEdSlg-1)
-(Estilização em Andamento)
 
 ## 💻 Tecnologias
 ### Front-end
