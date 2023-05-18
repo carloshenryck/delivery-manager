@@ -47,11 +47,13 @@ function Manage() {
     if (validateEmail(inputEmail)
         && validatePassword(inputPassword)
         && validateName()
-        && selectedRole !== '') {
+        && selectedRole !== ''
+    ) {
       setIsDisabled(false);
     } else {
       setIsDisabled(true);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputEmail, inputPassword, inputName, selectedRole]);
 
   return (
