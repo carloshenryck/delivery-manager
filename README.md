@@ -1,6 +1,26 @@
 <h1 align="center">Delivery Manager</h1>
 <br/>
 
+<details>
+<summary>Contas testes para utilizar:</summary>
+
+#### Administrador: 
+**email**: adm@deliveryapp.com<br>
+**senha**: --adm2@21!!--
+  
+ #### Vendedor: 
+**email**: fulana@deliveryapp.com<br>
+**senha**: fulana@123
+  
+ #### Cliente: 
+**email**: zebirita@email.com<br>
+**senha**: --zebirita--
+</details>
+<br/>
+<h1 align="center">
+  <img src="./apresentacao.png" alt="apresentação design" style="max-height:400px;border-radius:10px;"/>
+</h1>
+
 ## 📋 Sobre
 O projeto consiste em um site onde o usuário pode realizar a compra de bebidas e acompanhar o seu estado, e o vendedor poderá gerenciar todos os seus pedidos recebidos
 
@@ -19,7 +39,7 @@ O projeto consiste em um site onde o usuário pode realizar a compra de bebidas 
 - Cadastrar/Excluir vendedores
 
 ### Visualize todo o fluxo do projeto no figma
-[![Figma URL](https://img.shields.io/twitter/url?label=Veja%20no%20figma&logo=figma&logoColor=%234B0082&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCzwzjVrmxmAngJy1AgvLhU%2FHiLife-Prot-Alta-Fidelidade%3Fnode-id%3D0%253A1)](https://www.figma.com/file/IAIAk2omkWcXUY8kZxMlCC/delivery-app?type=design&node-id=0%3A1&t=SuFZMEcnZxLXYPFo-1)
+[![Figma URL](https://img.shields.io/twitter/url?label=Veja%20no%20figma&logo=figma&logoColor=%234B0082&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCzwzjVrmxmAngJy1AgvLhU%2FHiLife-Prot-Alta-Fidelidade%3Fnode-id%3D0%253A1)](https://www.figma.com/file/encAyJTwOGVvRtsIgPCpzP/Delivery-Manager?type=design&node-id=0%3A1&t=Qtr1L58SpUAEdSlg-1)
 (Estilização em Andamento)
 
 ## 💻 Tecnologias
@@ -58,36 +78,16 @@ OBS: você precisa do docker-compose instalado
 cd back-end
 docker-compose up -d
 ```
-Popule o banco de dados
+Rode o servidor Back-end
 ```bash
 cd back-end
-npm run db:reset
-```
-Rode o servidor back-end
-```bash
-cd back-end
-npm run dev
+npm start
 ```
 Rode o servidor front-end
 ```bash
 cd front-end
 npm start
 ```
-<details>
-<summary>Contas testes para utilizar:</summary>
-
-#### Administrador: 
-**email**: adm@deliveryapp.com<br>
-**senha**: --adm2@21!!--
-  
- #### Vendedor: 
-**email**: fulana@deliveryapp.com<br>
-**senha**: fulana@123
-  
- #### Cliente: 
-**email**: zebirita@email.com<br>
-**senha**: --zebirita--
-</details>
 
 ## 👨‍💻 Contribuidores
 <table>
